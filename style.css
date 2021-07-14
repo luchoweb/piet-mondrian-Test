@@ -28,7 +28,7 @@ main {
 .items {
     display: inline-grid;
     grid-template-columns: [col1] 4rem [col2] 3rem [col3] 7rem [col4] 5rem [col5] 5rem [col6] 1.5rem;
-    grid-template-rows: [row1] .5rem [row2] 4rem [row3] 4.5rem [row4] 6rem [row5] 4rem [row6] 4rem [row7] 5rem [row8] 3rem;
+    grid-template-rows: [row1] .5rem [row2] 3rem [row3] 4rem [row4] 5rem [row5] 4rem [row6] 4rem [row7] 4.5rem [row8] 1.5rem;
     border: 4px solid #fff;
     outline: 1px solid var(--black-color);
     margin: 7rem auto 0 auto;
