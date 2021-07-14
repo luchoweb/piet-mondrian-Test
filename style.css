@@ -1,0 +1,235 @@
+:root {
+    --gray-light: #dddcdc;
+    --gray-color: #98989b;
+    --black-color: #0c0c0a;
+    --blue-color: #122e41;
+    --orange-color: #cc3614;
+    --yellow-color: #ddb515;
+}
+
+body {
+    background: #fff url(bg.jpg) top center no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    padding: 0 2rem;
+}
+
+main {
+    text-align: center;
+}
+
+.title {
+    font-size: 30px;
+    margin-top: 2rem;
+}
+
+.items {
+    display: inline-grid;
+    grid-template-columns: [col1] 4rem [col2] 3rem [col3] 7rem [col4] 5rem [col5] 5rem [col6] 1.5rem;
+    grid-template-rows: [row1] .5rem [row2] 4rem [row3] 4.5rem [row4] 6rem [row5] 4rem [row6] 4rem [row7] 5rem [row8] 3rem;
+    border: 4px solid #fff;
+    outline: 1px solid var(--black-color);
+    margin: 7rem auto 0 auto;
+    width: auto
+}
+
+.item {
+    border: 1px solid #000;
+    text-indent: -9999px
+}
+
+/* BACKGROUND COLOR */
+.item-1, .item-3, .item-4, .item-20, .item-27 {
+    background-color: var(--gray-light)
+}
+
+.item-2, .item-7, .item-15, .item-16, .item-17, .item-23 {
+    background-color: var(--gray-color)
+}
+
+.item-5, .item-9, .item-11, .item-22, .item-28 {
+    background-color: var(--black-color)
+}
+
+.item-6, .item-10, .item-13, .item-24 {
+    background-color: var(--blue-color)
+}
+
+.item-8, .item-14, .item-19, .item-25 {
+    background-color: var(--orange-color)
+}
+
+.item-12, .item-18, .item-21, .item-26 {
+    background-color: var(--yellow-color)
+}
+
+/****** POSITIONS ******/
+
+/* ROWS */
+
+.item-1, .item-2 {
+    grid-row-start: row1;
+    grid-row-end: row2
+}
+
+.item-4 {
+    grid-row-start: row2;
+    grid-row-end: span row5
+}
+
+.item-5, .item-6 {
+    grid-row-start: row2;
+    grid-row-end: row3
+}
+
+
+.item-7, .item-8, .item-9, .item-10 {
+    grid-row-start: row3;
+    grid-row-end: row4
+}
+
+.item-11, .item-12 {
+    grid-row-start: row4;
+    grid-row-end: row5
+}
+
+.item-13, .item-14 {
+    grid-row-start: row4;
+    grid-row-end: span row6
+}
+
+.item-16, .item-17 {
+    grid-row-start: row5;
+    grid-row-end: span row8
+}
+
+.item-18 {
+    grid-row-start: row5;
+    grid-row-end: row6
+}
+
+.item-19, .item-20, .item-21 {
+    grid-row-start: row6;
+    grid-row-end: row7
+}
+
+.item-22, .item-23, .item-24 {
+    grid-row-start: row7;
+    grid-row-end: row8
+}
+
+.item-26, .item-27, .item-28 {
+    grid-row-start: row8;
+    grid-row-end: end
+}
+
+/* COLS */
+
+.item-1, .item-4, .item-16 {
+    grid-column-start: col1;
+    grid-column-end: col2
+}
+
+.item-2 {
+    grid-column-start: col2;
+    grid-column-end: span col5
+}
+
+.item-3 {
+    grid-column-start: col5;
+    grid-column-end: span end;
+    grid-row-start: row1;
+    grid-row-end: span row3
+}
+
+.item-5, .item-11, .item-17 {
+    grid-column-start: col2;
+    grid-column-end: col3
+}
+
+.item-6, .item-27 {
+    grid-column-start: col3;
+    grid-column-end: span col5
+}
+
+.item-7 {
+    grid-column-start: col2;
+    grid-column-end: span col4
+}
+
+.item-8, .item-13, .item-20, .item-23 {
+    grid-column-start: col4;
+    grid-column-end: col5
+}
+
+.item-9, .item-14, .item-21, .item-24, .item-28 {
+    grid-column-start: col5;
+    grid-column-end: col6
+}
+
+.item-10 {
+    grid-column-start: col6;
+    grid-column-end: end
+}
+
+.item-12, .item-18, .item-19, .item-22 {
+    grid-column-start: col3;
+    grid-column-end: col4
+}
+
+.item-15 {
+    grid-column-start: col6;
+    grid-column-end: end;
+    grid-row-start: row4;
+    grid-row-end: span row7
+}
+
+.item-25 {
+    grid-column-start: col6;
+    grid-column-end: end;
+    grid-row-start: row7;
+    grid-row-end: span end
+}
+
+.item-26 {
+    grid-column-start: col1;
+    grid-column-end: span col3
+}
+
+@media (max-width: 600px) {
+    .items {
+        align-items: center;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .item-1, .item-3, .item-4, .item-20, .item-27 {
+        order: 1;
+    }
+
+    .item-2, .item-7, .item-15, .item-16, .item-17, .item-23 {
+        order: 2;
+    }
+
+    .item-5, .item-9, .item-11, .item-22, .item-28 {
+        order: 3;
+    }
+
+    .item-6, .item-10, .item-13, .item-24 {
+        order: 4;
+    }
+
+    .item-12, .item-18, .item-21, .item-26 {
+        order: 5;
+    }
+
+    .item-8, .item-14, .item-19, .item-25 {
+        order: 6;
+    }
+}
